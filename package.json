@@ -9,7 +9,7 @@
     "start": "npm run dev",
     "lint": "eslint --ext .js,.vue src",
     "build": "node build/build.js",
-    "deploy": "npm run build && gh-pages --dist dist --user m-mogi-ojs<m.mogi.ojs@gmail.com>" 
+    "deploy": "npm run build && gh-pages --dist dist --user 'm-mogi-ojs <m.mogi.ojs@gmail.com>'" 
 
   },
   "dependencies": {
