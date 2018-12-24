@@ -1,6 +1,6 @@
 <template>
   <header>
-    <a href="/"><h1>{{ msg }}</h1></a>
+    <a href="/"><div>{{ msg }}</div></a>
     <nav>
       <ul>
         <li><a href="skill">Skill</a></li>
@@ -33,6 +33,9 @@ nav li{
   font-size: 20px;
   display:inline-block;
   padding: 0 15px;
+}
+div {
+  font-size: 48px;
 }
 a {
   color: #f2f2f2;
