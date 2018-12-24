@@ -25,5 +25,7 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 0px;
+  background-image: url("./assets/nature-3294543_1920.jpg");
+  background-size: cover;
 }
 </style>

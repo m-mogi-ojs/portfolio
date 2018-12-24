@@ -1,7 +1,6 @@
 <template>
   <div class="hello">
-    <h1>{{ msg }}</h1>
-    <div>abcd</div>
+    <div>適当なもくもくな背景を表示してみた</div>
     <div>abcd</div>
     <div>abcd</div>
     <div>abcd</div>
@@ -32,12 +31,7 @@
 
 <script>
 export default {
-  name: 'HelloWorld',
-  data () {
-    return {
-      msg: 'Portfolio App'
-    }
-  }
+  name: 'HelloWorld'
 }
 </script>
 
@@ -56,5 +50,9 @@ li {
 }
 a {
   color: #42b983;
+}
+.hello {
+  background-color: azure;
+  opacity: 0.7;
 }
 </style>

@@ -1,10 +1,7 @@
 <template>
   <footer class="footer">
-    <div>
-      <a href="index.html">Dummy1</a>
-      <a href="item.html">Dummy2</a>
-      <a href="shop.html">Dummy3</a>
-    </div>
+      <span>連絡先：m.mogi.ojs@gmail.com</span>
+      <a href="https://github.com/m-mogi-ojs"><img src="../../assets/GitHub-Mark-Light-32px.png" alt="" width="22px" height="22px"></a>
   </footer>
 </template>
 
@@ -15,19 +12,16 @@ export default {
 </script>
 
 <style scoped>
-.footer {
+footer {
   background-color: #333;
   overflow: hidden;
 }
-.footer a{
+footer span{
   color: #f2f2f2;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
   font-size: 17px;
+  padding: 0px 20px;
 }
-.footer a:hover {
-  background-color: #ddd;
-  color: black;
+footer img{
+  position:absolute
 }
 </style>
