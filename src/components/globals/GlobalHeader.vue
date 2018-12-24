@@ -2,12 +2,12 @@
   <header>
     <a href="/"><h1>{{ msg }}</h1></a>
     <nav>
-        <ul>
-          <li><a href="skill">Skill</a></li>
-          <li><a href="history">History</a></li>
-          <li><a href="service">Service</a></li>
-          <li><a href="minigame">Mini Game</a></li>
-        </ul>
+      <ul>
+        <li><a href="skill">Skill</a></li>
+        <li><a href="history">History</a></li>
+        <li><a href="service">Service</a></li>
+        <li><a href="minigame">Mini Game</a></li>
+      </ul>
     </nav>
   </header>
 </template>
