@@ -1,5 +1,5 @@
 <template>
-  <div class="hello">
+  <div class="top-background">
     <div>適当なもくもくな背景を表示してみた</div>
     <div>abcd</div>
     <div>abcd</div>
@@ -40,7 +40,7 @@ export default {
 h1, h2 {
   font-weight: normal;
 }
-.hello {
+.top-background {
   background-color: azure;
   opacity: 0.8;
 }
