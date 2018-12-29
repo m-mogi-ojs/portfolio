@@ -24,8 +24,11 @@ export default {
 </script>
 
 <style scoped>
+header {
+  text-align: center;
+}
 nav {
-  background-color: #dddddd;
+  background-color: #eeeeee;
   overflow: hidden;
 }
 nav li{
