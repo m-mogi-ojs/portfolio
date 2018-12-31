@@ -15,6 +15,7 @@ export default {
 footer {
   background-color: #eeeeee;
   overflow: hidden;
+  text-align: center;
 }
 footer span{
   color: #222222;

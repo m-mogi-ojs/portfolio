@@ -1,12 +1,12 @@
 <template>
   <header>
-    <a href="/"><div>{{ msg }}</div></a>
+    <div id="header-title"><router-link to="/">{{ msg }}</router-link></div>
     <nav>
       <ul>
-        <li><a href="skill"><img src="../../assets/icon-pencil.png" alt="Skill" width="20" height="20">Skill</a></li>
-        <li><a href="history"><img src="../../assets/icon-book.png" alt="Skill" width="20" height="20">History</a></li>
-        <li><a href="service"><img src="../../assets/icon-cloud.png" alt="Skill" width="20" height="20">Service</a></li>
-        <li><a href="minigame"><img src="../../assets/icon-game.png" alt="Skill" width="20" height="20">Mini Game</a></li>
+        <router-link tag="li" exact to="skill"><img src="../../assets/icon-pencil.png" alt="Skill" align="left"><a>Skill</a></router-link>
+        <router-link tag="li" exact to="history"><img src="../../assets/icon-book.png" alt="History" align="left"><a>History</a></router-link>
+        <router-link tag="li" exact to="service"><img src="../../assets/icon-cloud.png" alt="Service" align="left"><a>Service</a></router-link>
+        <router-link tag="li" exact to="minigame"><img src="../../assets/icon-game.png" alt="Mini Game" align="left"><a>Mini Game</a></router-link>
       </ul>
     </nav>
   </header>
@@ -30,31 +30,40 @@ header {
 nav {
   background-color: #eeeeee;
   overflow: hidden;
+  height: 36px;
+}
+ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
 }
 nav li{
-  font-size: 20px;
   display:inline-block;
   padding: 0 15px;
 }
-div {
+#header-title {
   font-size: 48px;
 }
 a {
   color: #222222;
   text-decoration: none;
-  height: 20px;
 }
-nav a:hover {
+li a {
+  font-size: 26px;
+}
+nav li:hover {
   background-color: #ddd;
   color: black;
 }
-nav a.active {
-  background-color: #4CAF50;
-  color: white;
+nav .router-link-active {
+  background-color: #cccccc;
+  color: black;
 }
 img {
   position:relative;
-  height:27px;
-  width:27px;
+  height:32px;
+  width:32px;
+  top: 2px;
 }
 </style>
