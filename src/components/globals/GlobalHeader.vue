@@ -3,10 +3,10 @@
     <div id="header-title"><router-link to="/">{{ msg }}</router-link></div>
     <nav>
       <ul>
-        <router-link tag="li" exact to="skill"><img src="../../assets/icon-pencil.png" alt="Skill" align="left"><a>Skill</a></router-link>
-        <router-link tag="li" exact to="history"><img src="../../assets/icon-book.png" alt="History" align="left"><a>History</a></router-link>
-        <router-link tag="li" exact to="service"><img src="../../assets/icon-cloud.png" alt="Service" align="left"><a>Service</a></router-link>
-        <router-link tag="li" exact to="minigame"><img src="../../assets/icon-game.png" alt="Mini Game" align="left"><a>Mini Game</a></router-link>
+        <router-link tag="li" exact to="skill"><img src="../../assets/img/icon-pencil.png" alt="Skill" align="left"><a>Skill</a></router-link>
+        <router-link tag="li" exact to="history"><img src="../../assets/img/icon-book.png" alt="History" align="left"><a>History</a></router-link>
+        <router-link tag="li" exact to="service"><img src="../../assets/img/icon-cloud.png" alt="Service" align="left"><a>Service</a></router-link>
+        <router-link tag="li" exact to="minigame"><img src="../../assets/img/icon-game.png" alt="Mini Game" align="left"><a>Mini Game</a></router-link>
       </ul>
     </nav>
   </header>

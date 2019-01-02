@@ -22,7 +22,7 @@ export default {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-image: url("./assets/nature-3294543_1920.jpg");
+  background-image: url("./assets/img/nature-3294543_1920.jpg");
   background-size: cover;
 }
 </style>

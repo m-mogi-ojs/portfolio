@@ -1,7 +1,7 @@
 <template>
   <footer class="footer">
       <span>連絡先：m.mogi.ojs@gmail.com</span>
-      <a href="https://github.com/m-mogi-ojs"><img src="../../assets/GitHub-Mark-32px.png" alt="" width="22px" height="22px"></a>
+      <a href="https://github.com/m-mogi-ojs"><img src="../../assets/img/GitHub-Mark-32px.png" alt="" width="22px" height="22px"></a>
   </footer>
 </template>
 
