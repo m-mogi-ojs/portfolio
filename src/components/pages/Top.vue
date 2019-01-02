@@ -1,38 +1,20 @@
 <template>
-  <div class="top-background">
-    <div>適当なもくもくな背景を表示してみた</div>
-    <div>abcd</div>
-    <div>abcd</div>
-    <div>abcd</div>
-    <div>abcd</div>
-    <div>abcd</div>
-    <div>abcd</div>
-    <div>abcd</div>
-    <div>abcd</div>
-    <div>abcd</div>
-    <div>abcd</div>
-    <div>abcd</div>
-    <div>abcd</div>
-    <div>abcd</div>
-    <div>abcd</div>
-    <div>abcd</div>
-    <div>abcd</div>
-    <div>abcd</div>
-    <div>abcd</div>
-    <div>abcd</div>
-    <div>abcd</div>
-    <div>abcd</div>
-    <div>abcd</div>
-    <div>abcd</div>
-    <div>abcd</div>
-    <div>abcd</div>
-  </div>
+  <section class="section">
+    <div class="columns">
+      <div class="column">
+        <div class="card">
+          <div class="card-content">
+            <div class="content">
+              Topページは不要な気がする
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 </template>
 
 <script>
-export default {
-  name: 'Top'
-}
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->

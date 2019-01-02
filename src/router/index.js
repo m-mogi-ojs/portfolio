@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Top from '@/components/pages/Top'
+// import Top from '@/components/pages/Top'
 import Skill from '@/components/pages/Skill'
 import History from '@/components/pages/History'
 import Service from '@/components/pages/Service'
@@ -12,8 +12,8 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'Top',
-      component: Top
+      name: 'Skill',
+      component: Skill
     },
     {
       path: '/skill',

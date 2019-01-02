@@ -18,11 +18,10 @@ export default {
 </script>
 
 <style>
+@import "assets/css/bulma.css";
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-image: url("./assets/img/nature-3294543_1920.jpg");
-  background-size: cover;
 }
 </style>
