@@ -1,7 +1,7 @@
 <template>
   <div class="skill-card">
-    <section>
-      <i :class="[cardImageClass]"></i>
+    <section :class="[onEffectClasses]">
+      <i :class="[cardImageClass, isDisplayElement ? 'onLoadedEffect' : '' ]"></i>
       <h1 class="title">{{ title }}</h1>
       <ul>
         <li v-for="detail in details" :key="detail.title">
@@ -11,10 +11,15 @@
         </li>
       </ul>
     </section>
+    <div v-if="isDisplayElement">
+      true
+    </div>
   </div>
 </template>
 
 <script>
+const notVisible = 'notVisible'
+
 export default {
   name: 'SkillCard',
   props: {
@@ -33,6 +38,53 @@ export default {
     cardImageClass: {
       type: String,
       required: false
+    }
+  },
+  data () {
+    return {
+      onEffectClasses: ['notVisible'],
+      scrollY: 0,
+      positionY: 0,
+      isDisplayElement: false,
+      clientHeight: 0
+    }
+  },
+  mounted () {
+    // let func = function () {
+    //   // this.onEffectClasses.push(onLoadedEffectClass)
+    //   this.onEffectClasses.shift()
+    // }.bind(this)
+    // setTimeout(func, 1000)
+
+    window.addEventListener('scroll', this.handleScroll)
+    this.clientHeight = this.$el.getBoundingClientRect().height
+    this.onEffectClasses.shift()
+  },
+  methods: {
+    handleScroll: function () {
+      this.$nextTick(function () {
+        this.scrollY = window.scrollY
+        this.positionY = this.$el.getBoundingClientRect().y
+      }.bind(this))
+
+      /**
+       * 画面下の判定
+       * 画面最上部との距離 + 要素サイズ > 0
+       * かつ
+       * 画面上の判定
+       * 画面最上部との距離 < 画面サイズ
+       */
+      if (this.positionY + this.clientHeight > 0 && this.positionY < window.innerHeight) {
+        console.log('true')
+        this.isDisplayElement = true
+        this.onEffectClasses.shift()
+        return null
+      }
+      console.log('false')
+      this.isDisplayElement = false
+      if (this.onEffectClasses.indexOf(notVisible) === -1) {
+        this.onEffectClasses.push(notVisible)
+      }
     }
   }
 }
@@ -65,6 +117,9 @@ li {
     flex-wrap: wrap;
   }
 }
+section {
+  transition: all 1s ease-in 0.2s;
+}
 .skill-card {
   border: $border;
   border-radius: 0.3rem;
@@ -72,6 +127,7 @@ li {
   border-color: $border-color;
   padding: 1rem;
   box-shadow: 0.1rem 0.1rem rgba(0,0,0,0.1);
+  transition: all 1s ease-in 0.2s;
 }
 .title {
   border-bottom: $border;
@@ -89,5 +145,11 @@ li {
 }
 .contents {
   flex-basis: 70%;
+}
+.onLoadedEffect {
+  opacity: 1.0;
+}
+.notVisible {
+  opacity: 0.0;
 }
 </style>

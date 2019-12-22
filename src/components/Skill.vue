@@ -6,6 +6,7 @@
         :title="clientSkillCard.title"
         :details="clientSkillCard.details"
         :card-image-class="clientSkillCard.cardImageClass"
+        ref="clientSkillCard"
       ></SkillCard>
       <SkillCard
         :title="serverSkillCard.title"
@@ -65,6 +66,9 @@ export default {
         cardImageClass: 'fas fa-tools fa-4x'
       }
     }
+  },
+  mounted () {
+    console.log(this.$refs.clientSKillCard)
   }
 }
 </script>
