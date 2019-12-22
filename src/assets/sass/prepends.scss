@@ -1,6 +1,0 @@
-$mobile: 'screen and (max-width: 768px)';
-@mixin mq($breakpoint: mobile) {
-  @media #{$mobile} {
-    @content;
-  }
-}
