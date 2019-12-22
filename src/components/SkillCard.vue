@@ -65,10 +65,10 @@ export default {
       }.bind(this))
 
       /**
-       * 画面下の判定
+       * 画面上部の判定
        * 画面最上部との距離 + 要素サイズ > 0
        * かつ
-       * 画面上の判定
+       * 画面下部の判定
        * 画面最上部との距離 < 画面サイズ
        */
       if (this.positionY + this.clientHeight > 0 && this.positionY < window.innerHeight) {
