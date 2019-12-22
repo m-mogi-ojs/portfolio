@@ -58,7 +58,7 @@ export default {
 
     window.addEventListener('scroll', this.handleScroll)
     this.clientHeight = this.$el.getBoundingClientRect().height
-    this.onEffectClasses.shift()
+    this.handleScroll()
   },
   methods: {
     handleScroll: function () {
@@ -75,12 +75,13 @@ export default {
        * 画面最上部との距離 < 画面サイズ
        */
       if (this.positionY + this.clientHeight > 0 && this.positionY < window.innerHeight) {
-        console.log('true')
         this.isDisplayElement = true
-        this.onEffectClasses.shift()
-        return null
+        let i = this.onEffectClasses.indexOf(notVisible)
+        if (i >= 0) {
+          this.onEffectClasses.splice(i, 1)
+        }
+        return
       }
-      console.log('false')
       this.isDisplayElement = false
       if (this.onEffectClasses.indexOf(notVisible) === -1) {
         this.onEffectClasses.push(notVisible)

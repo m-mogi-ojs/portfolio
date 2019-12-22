@@ -5,5 +5,6 @@ module.exports = {
         prependData: '@import "./src/assets/sass/prepends.scss";'
       }
     }
-  }
+  },
+  publicPath: ''
 }
