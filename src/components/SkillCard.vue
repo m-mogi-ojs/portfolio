@@ -11,9 +11,6 @@
         </li>
       </ul>
     </section>
-    <div v-if="isDisplayElement">
-      true
-    </div>
   </div>
 </template>
 
