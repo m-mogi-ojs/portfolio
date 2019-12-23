@@ -3,28 +3,19 @@
     <header>
       <h1>Portfolio</h1>
     </header>
-    <OverView></OverView>
     <Skill></Skill>
     <History></History>
-    <Service></Service>
-    <MiniGame></MiniGame>
   </div>
 </template>
 
 <script>
-import OverView from './components/OverView.vue'
 import Skill from './components/Skill.vue'
 import History from './components/History.vue'
-import Service from './components/Service.vue'
-import MiniGame from './components/MiniGame.vue'
 
 export default {
   name: 'app',
   components: {
-    OverView,
     Skill,
-    Service,
-    MiniGame,
     History
   }
 }

@@ -1,19 +1,47 @@
 <template>
   <div class="history">
-    <section>
-      <h1>History</h1>
-      <div>
-        <canvas class="card" width=750 height=1500></canvas>
-      </div>
-    </section>
+    <HistoryCard
+      :title="card.title"
+      :details="card.details"
+      :card-image-class="card.cardImageClass"
+      ref="card"
+    ></HistoryCard>
   </div>
 </template>
 
 <script>
+import HistoryCard from './HistoryCard.vue'
+
 export default {
   name: 'History',
-  props: {
-    msg: String
+  components: {
+    HistoryCard
+  },
+  data () {
+    return {
+      card: {
+        title: 'History',
+        details: [{
+          officeName: 'CompanyA',
+          project: [{
+            projectName: '',
+            period: '',
+            contents: '',
+            devTools: []
+          }]
+        }, {
+          officeName: 'CompanyB',
+          project: [{
+            projectName: '',
+            period: '',
+            contents: '',
+            devTools: []
+          }]
+        }
+        ],
+        cardImageClass: 'fas fa-history fa-4x'
+      }
+    }
   }
 }
 </script>
@@ -23,5 +51,8 @@ export default {
 .card {
   border: solid;
   border-color: lightgray;
+}
+.history-card {
+  margin-top: 2rem;
 }
 </style>

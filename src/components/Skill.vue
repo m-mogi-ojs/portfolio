@@ -3,20 +3,11 @@
     <section>
       <h1>Skill</h1>
       <SkillCard
-        :title="clientSkillCard.title"
-        :details="clientSkillCard.details"
-        :card-image-class="clientSkillCard.cardImageClass"
-        ref="clientSkillCard"
-      ></SkillCard>
-      <SkillCard
-        :title="serverSkillCard.title"
-        :details="serverSkillCard.details"
-        :card-image-class="serverSkillCard.cardImageClass"
-      ></SkillCard>
-      <SkillCard
-        :title="devtoolsSkillCard.title"
-        :details="devtoolsSkillCard.details"
-        :card-image-class="devtoolsSkillCard.cardImageClass"
+        v-for="d in skillMasterData"
+        :key="d.title"
+        :title="d.title"
+        :details="d.details"
+        :card-image-class="d.cardImageClass"
       ></SkillCard>
     </section>
   </div>
@@ -24,6 +15,7 @@
 
 <script>
 import SkillCard from './SkillCard.vue'
+import { SkillMasterData } from './../assets/javascript/SkillMasterData.js'
 
 export default {
   name: 'Skill',
@@ -32,43 +24,10 @@ export default {
   },
   data () {
     return {
-      clientSkillCard: {
-        title: 'Client side skill',
-        details: [{
-          label: 'Vue.js',
-          contents: '実務1年',
-          imageClass: 'devicon-vuejs-plain colored'
-        },
-        {
-          label: 'JQuery',
-          contents: 'テストメッセージ。テストメッセージ。テストメッセージ。テストメッセージ。テストメッセージ。テストメッセージ。テストメッセージ。テストメッセージ。テストメッセージ。テストメッセージ。テストメッセージ。テストメッセージ。テストメッセージ。',
-          imageClass: 'devicon-jquery-plain colored'
-        }
-        ],
-        cardImageClass: 'fas fa-laptop-code fa-4x'
-      },
-      serverSkillCard: {
-        title: 'Server side skill',
-        details: [{
-          label: 'Ruby on Rails',
-          contents: '実務1年',
-          imageClass: 'devicon-rails-plain colored'
-        }],
-        cardImageClass: 'fas fa-server fa-4x'
-      },
-      devtoolsSkillCard: {
-        title: 'Dev tools skill',
-        details: [{
-          label: 'Visual Studio Code',
-          contents: '実務1年',
-          imageClass: ''
-        }],
-        cardImageClass: 'fas fa-tools fa-4x'
-      }
+      skillMasterData: SkillMasterData
     }
   },
   mounted () {
-    console.log(this.$refs.clientSKillCard)
   }
 }
 </script>

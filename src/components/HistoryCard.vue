@@ -1,5 +1,5 @@
 <template>
-  <div class="skill-card">
+  <div class="history-card">
     <section :class="[onEffectClasses]">
       <i :class="[cardImageClass, isDisplayElement ? 'onLoadedEffect' : '' ]"></i>
       <h1 class="title">{{ title }}</h1>
@@ -112,7 +112,7 @@ li {
 section {
   transition: opacity 1s ease-in 0.2s, transform 1.2s ease-in 0.2s;
 }
-.skill-card {
+.history-card {
   border: $border;
   border-radius: 0.3rem;
   border-width: $border-width;
