@@ -1,7 +1,7 @@
 <template>
   <div class="skill-card">
-    <section :class="[onEffectClasses]">
-      <i :class="[cardImageClass, isDisplayElement ? 'onLoadedEffect' : '' ]"></i>
+    <section :class="[onEffectClasses, { 'card-in': isDisplayElement }]">
+      <i :class="[cardImageClass]"></i>
       <h1 class="title">{{ title }}</h1>
       <ul>
         <li v-for="detail in details" :key="detail.title">
@@ -15,7 +15,6 @@
 </template>
 
 <script>
-const notVisible = 'notVisible'
 
 export default {
   name: 'SkillCard',
@@ -47,12 +46,12 @@ export default {
     }
   },
   mounted () {
-    window.addEventListener('scroll', this.handleScroll)
+    window.addEventListener('scroll', this.scrollCallback)
     this.clientHeight = this.$el.getBoundingClientRect().height
-    this.handleScroll()
+    this.scrollCallback()
   },
   methods: {
-    handleScroll: function () {
+    scrollCallback: function () {
       this.$nextTick(function () {
         this.scrollY = window.scrollY
         this.positionY = this.$el.getBoundingClientRect().y
@@ -66,16 +65,13 @@ export default {
        * 画面最上部との距離 < 画面サイズ
        */
       if (this.positionY + this.clientHeight > 0 && this.positionY < window.innerHeight) {
-        this.isDisplayElement = true
-        let i = this.onEffectClasses.indexOf(notVisible)
-        if (i >= 0) {
-          this.onEffectClasses.splice(i, 1)
+        if (!this.isDisplayElement) {
+          this.isDisplayElement = true
         }
-        return
-      }
-      this.isDisplayElement = false
-      if (this.onEffectClasses.indexOf(notVisible) === -1) {
-        this.onEffectClasses.push(notVisible)
+      } else {
+        if (this.isDisplayElement) {
+          this.isDisplayElement = false
+        }
       }
     }
   }
@@ -145,4 +141,14 @@ section {
   opacity: 0.0;
   transform: translateY(10px);
 }
+
+.card-in {
+  animation: card-in 1.2s 0.2s forwards ease-in;
+}
+
+@keyframes card-in {
+  0% { opacity: 0; transform: translateY(10px); }
+  100% { opacity: 1; }
+}
+
 </style>
